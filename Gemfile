@@ -21,7 +21,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'simple_form', '~> 5.1'
+# Forms made easy!
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+# bootstrap-sass is a Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications.
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

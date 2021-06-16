@@ -1,0 +1,39 @@
+rails g model Crisp name image_url slug
+rake db:migrate
+rails g controller Crisps 
+
+----------------------------
+create new rails app 
+
+Create First models
+CRISP MODEL
+name: string
+??? image_url: string
+??? slug: string
+??? has_many: reviews
+
+Generate Crisp controller. 
+
+run rake db:migrate
+run rails webpacker:install
+
+REVIEW MODEL
+title: string
+description: string
+score: integer
+belongs_to: crisp
+
+Added fast_jsonapi gem
+
+Create (generate) Crisp and Review serializer
+
+Create controllers (Pages, Crisps, Reviews)
+
+Created routes in both controllers
+
+Rendering React to DOM, create App.js
+
+Created First Crisps Crisps compnents. 
+
+Added Axios to fetch from API
+

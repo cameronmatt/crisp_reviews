@@ -1,0 +1,2 @@
+class Crisp < ApplicationRecord
+end
