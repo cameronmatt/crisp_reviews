@@ -17,6 +17,10 @@ Generate Crisp controller.
 run rake db:migrate
 run rails webpacker:install
 
+Add simple_form and bootstrap-sass gems
+
+
+
 REVIEW MODEL
 title: string
 description: string
