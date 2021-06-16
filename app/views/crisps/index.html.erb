@@ -1,5 +1,7 @@
 <% @crisps.each do |crisp| %>
 
-    <h2><%= crisp.name %></h2>
+    <h2><%= link_to crisp.name, crisp_path(crisp) %></h2>
 
 <% end %>
+
+<%= link_to "Add book", new_crisp_path %>

@@ -19,7 +19,15 @@ run rails webpacker:install
 
 Add simple_form and bootstrap-sass gems
 
+Created Views for New, index and form. 
 
+Rendering Form to New View
+
+Rendering newly created crisps to index view.
+
+Added Devise Gem and installed. 
+Generated Devise Model: User
+rake db:migrate
 
 REVIEW MODEL
 title: string
