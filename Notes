@@ -43,15 +43,14 @@ Update has_many and Belongs_to in models.
 Add paperclip gem to allow for uploading of images. 
 Change to Crisp model. 
 Ran rails g paperclip Crisp crisp_img 
-rake db:migrate ======================================== not working
+rake db:migrate
 
+rails g model Review rating:integer comment:text
 REVIEW MODEL
-title: string
-description: string
-score: integer
-belongs_to: crisp
+comment: text
+rating: integer
 
-Added fast_jsonapi gem
+
 
 Create (generate) Crisp and Review serializer
 
