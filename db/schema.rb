@@ -10,12 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_16_130941) do
+ActiveRecord::Schema.define(version: 2021_06_17_002557) do
 
   create_table "crisps", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.string "crisp_img_file_name"
+    t.string "crisp_img_content_type"
+    t.bigint "crisp_img_file_size"
+    t.datetime "crisp_img_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

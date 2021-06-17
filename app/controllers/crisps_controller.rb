@@ -9,11 +9,11 @@ class CrispsController < ApplicationController
     end
 
     def new
-        @crisp = Crisp.new
+        @crisp = current_user.crisps.build
     end
 
     def create
-        @crisp = Crisp.new(book_params)
+        @crisp = current_user.crisps.build(crisp_params)
 
         if @crisp.save
             redirect_to root_path
@@ -24,8 +24,8 @@ class CrispsController < ApplicationController
 
     private
 
-    def book_params
-        params.require(:crisp).permit(:name)
+    def crisp_params
+        params.require(:crisp).permit(:name, :crisp_img)
     end
 
 end

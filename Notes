@@ -29,6 +29,22 @@ Added Devise Gem and installed.
 Generated Devise Model: User
 rake db:migrate
 
+Add Sign up and login/log out.
+
+Added User to crisps
+rails g migration add_user_id_to_crisps user_id:integer
+rake db:migrate
+
+Now able to upload an image
+
+updated crisp controller new & create methods. 
+Update has_many and Belongs_to in models. 
+
+Add paperclip gem to allow for uploading of images. 
+Change to Crisp model. 
+Ran rails g paperclip Crisp crisp_img 
+rake db:migrate ======================================== not working
+
 REVIEW MODEL
 title: string
 description: string

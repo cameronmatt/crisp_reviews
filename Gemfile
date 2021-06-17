@@ -19,6 +19,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+gem 'paperclip', '~> 6.1'
+# Easy upload management for ActiveRecord
+#gem 'mimemagic'
+# required for paperclip gem
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'simple_form', '~> 5.1'

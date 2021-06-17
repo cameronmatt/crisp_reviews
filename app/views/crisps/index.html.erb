@@ -1,7 +1,10 @@
-<% @crisps.each do |crisp| %>
-
-    <h2><%= link_to crisp.name, crisp_path(crisp) %></h2>
-
-<% end %>
-
-<%= link_to "Add book", new_crisp_path %>
+<div class="row>"
+    <% @crisps.each do |crisp| %>
+        <div class="col-md-3">
+            <a href="/crisps/<%= crisp.id %>">
+                <%= image_tag crisp.crisp_img.url(:crisp_index) class: "crisp" %>
+            </a>
+            <h2><%= link_to crisp.name, crisp_path(crisp) %></h2>
+        </div>
+    <% end %>
+</div>
