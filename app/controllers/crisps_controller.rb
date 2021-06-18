@@ -6,6 +6,12 @@ class CrispsController < ApplicationController
 
     def show
         @crisp = Crisp.find(params[:id])
+
+        if @crisp.reviews.blank?
+            @average_review = 0
+        else
+            @average_review = @crisp.reviews.average(:rating).round(2)
+        end
     end
 
     def new

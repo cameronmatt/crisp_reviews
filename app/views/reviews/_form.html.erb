@@ -1,0 +1,17 @@
+<%= simple_form_for([@crisp, @crisp.reviews.build]) do |form| %>
+    <%= form.input :comment, label: "Write Review" %>
+    <div id="rating-questions">
+        <label>How many starts would you give them?</label>
+    </div>
+    <div id="rating-form"></div>
+    <%= form.button :submit %>
+<% end %>
+
+<script>
+$(document).ready(function() {
+    $('#rating-form').raty({
+        path: '/assets/', 
+        scoreName: 'review[rating]'
+    });
+});
+</script>  

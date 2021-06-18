@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
         @review.user_id = current_user.id
 
         if @review.save
-            redirect_to root_path(@crisp)
+            redirect_to crisp_path(@crisp)
         else 
             render 'new'
         end

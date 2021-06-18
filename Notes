@@ -50,17 +50,18 @@ REVIEW MODEL
 comment: text
 rating: integer
 
+rails g migration add_user_id_to_reviews user_id:integer
+Which add the User ID to the Reviews
 
+rails g migration add_book_id_to_reviews book_id:integer
+Adds book Id to Reviews.
 
-Create (generate) Crisp and Review serializer
+Generated Reviews controller
 
-Create controllers (Pages, Crisps, Reviews)
+Create new simple_form for reviews
+including new New page in Review views. 
+Add to Crisp review page.
 
-Created routes in both controllers
-
-Rendering React to DOM, create App.js
-
-Created First Crisps Crisps compnents. 
-
-Added Axios to fetch from API
-
+Download jQuery Raty 
+installed CDN's to get jquery working. 
+Warapped raty in $(document).ready(function() 

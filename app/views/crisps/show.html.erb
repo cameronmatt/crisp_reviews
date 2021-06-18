@@ -1,8 +1,44 @@
 <div class="row">
 
 <h2><%= @crisp.name %></h2>
-
+<h2>Average Rating</h2>
+<div class="average-review-rating" data-score=<%= @average_review  %>></div>
 <a>
     <%= image_tag @crisp.crisp_img.url(:crisp_show), class: "crisp-show" %>
 </a>
 
+</div>
+
+<div>
+    <% if user_signed_in? %>
+        <%= link_to "Add Review", new_crisp_review_path(@crisp) %>
+    <% end %>
+</div>
+
+<div>
+    <%= render @crisp.reviews %>
+</div>
+
+<script>
+$(document).ready(function() {
+    $('.review-rating').raty({
+        readOnly: true,
+        score: function() {
+            return $(this).attr('data-score');
+        },
+        path: '/assets/'
+    });
+});
+</script>    
+
+<script>
+$(document).ready(function() {
+    $('.average-review-rating').raty({
+        readOnly: true,
+        score: function() {
+            return $(this).attr('data-score');
+        },
+        path: '/assets/'
+    });
+});
+</script>    
