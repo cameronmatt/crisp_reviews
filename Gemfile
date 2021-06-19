@@ -54,6 +54,8 @@ group :development do
   gem 'jquery-rails'
   # Facebook login
   gem 'omniauth-facebook'
+  #gem 'omniauth-facebook', "~> 1.9.1"
+  gem 'omniauth-rails_csrf_protection'
 end
 
 group :test do

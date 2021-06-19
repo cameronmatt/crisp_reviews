@@ -53,8 +53,8 @@ rating: integer
 rails g migration add_user_id_to_reviews user_id:integer
 Which add the User ID to the Reviews
 
-rails g migration add_book_id_to_reviews book_id:integer
-Adds book Id to Reviews.
+rails g migration add_book_id_to_reviews crisp_id:integer
+Adds crisp Id to Reviews.
 
 Generated Reviews controller
 
@@ -65,3 +65,7 @@ Add to Crisp review page.
 Download jQuery Raty 
 installed CDN's to get jquery working. 
 Warapped raty in $(document).ready(function() 
+
+Added omni auth gem
+rails g migration AddOmniauthToUsers provider:string uid:string
+ADDED gem 'omniauth-rails_csrf_protection'
