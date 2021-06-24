@@ -1,0 +1,4 @@
+<%= simple_form_for([@review, @review.comments.build]) do |form| %>
+    <%= form.input :comment, label: "Add Comment" %>
+    <%= form.button :submit %>
+<% end %>

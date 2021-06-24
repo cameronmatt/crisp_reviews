@@ -3,10 +3,9 @@
 <h2><%= @crisp.name %></h2>
 <h2>Average Rating</h2>
 <div class="average-review-rating" data-score=<%= @average_review  %>></div>
-<a>
-    <%= image_tag @crisp.crisp_img.url(:crisp_show), class: "crisp-show" %>
-</a>
-
+    <a>
+        <%= image_tag @crisp.crisp_img.url(:crisp_show), class: "crisp-show" %>
+    </a>
 </div>
 
 <div>
@@ -17,7 +16,7 @@
 
 <div>
     <%= render @crisp.reviews %>
-</div>
+</div> 
 
 <script>
 $(document).ready(function() {

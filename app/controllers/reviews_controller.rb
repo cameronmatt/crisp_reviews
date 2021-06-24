@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-    before_action :find_book
+    before_action :find_crisp
 
     def new
         @review = Review.new
@@ -23,7 +23,7 @@ class ReviewsController < ApplicationController
         params.require(:review).permit(:rating, :comment)
     end
 
-    def find_book
+    def find_crisp
         @crisp = Crisp.find(params[:crisp_id])
     end
 end
