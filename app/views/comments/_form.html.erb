@@ -1,4 +1,10 @@
 <%= simple_form_for([@review, @review.comments.build]) do |form| %>
-    <%= form.input :comment, label: "Add Comment" %>
+    <%= form.input :comment, 
+                    label: "Add Comment",
+                    error: 'Please enter your comment',
+                    required: true,
+                    class: 'form-field',
+                    autofocus: true 
+                    %>
     <%= form.button :submit %>
 <% end %>

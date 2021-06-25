@@ -69,3 +69,10 @@ Warapped raty in $(document).ready(function()
 Added omni auth gem
 rails g migration AddOmniauthToUsers provider:string uid:string
 ADDED gem 'omniauth-rails_csrf_protection'
+
+Create Comments controller, modelm views. 
+Comments working. 
+
+Add validation to new crisp (added to model
+Set HTML 5 validations to true
+Added validation to reveiws and comments

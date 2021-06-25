@@ -1,5 +1,14 @@
 <%= simple_form_for @crisp do |form| %>
-    <%= form.input :name, label: "Crisp Name" %>
-    <%= form.file_field :crisp_img %>
+
+    <%= form.input :name, 
+                    label: "Crisp Name",
+                    placeholder: 'Brand followed by flavour',
+                    error: 'Please enter a name',
+                    required: true,
+                    class: 'form-field',
+                    autofocus: true,
+                    input_html: { autocomplete: "last_name" }
+                    %>
+    <%= form.file_field :crisp_img, required: true %>
     <%= form.button :submit %>
 <% end %>

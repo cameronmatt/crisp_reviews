@@ -1,7 +1,14 @@
 <%= simple_form_for([@crisp, @crisp.reviews.build]) do |form| %>
-    <%= form.input :comment, label: "Write Review" %>
+
+    <%= form.input :comment, 
+                    label: "Write Review", 
+                    error: 'Please enter your review',
+                    required: true,
+                    class: 'form-field',
+                    autofocus: true
+                    %>
     <div id="rating-questions">
-        <label>How many starts would you give them?</label>
+        <label>How many stars would you give them?</label>
     </div>
     <div id="rating-form"></div>
     <%= form.button :submit %>
@@ -13,5 +20,8 @@ $(document).ready(function() {
         path: '/assets/', 
         scoreName: 'review[rating]'
     });
+    $('#rating-form').validate({
+        ignore: []
+})
 });
 </script>  
