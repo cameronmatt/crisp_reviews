@@ -1,2 +1,7 @@
-<div class="review-comment"><%= comment.comment %></div>
-
+<div class="comment-comment">
+    <% if comment.comment? %>
+        <div class="user-image">
+            <%= image_tag("/code/crisp_reviews/app/assets/images/user.png", :alt => "user image") %> <%= comment.comment %>
+        </div>
+    <% end %>
+</div>

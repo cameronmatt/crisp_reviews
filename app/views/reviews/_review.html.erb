@@ -1,13 +1,13 @@
 <div class="review-rating" data-score="<%= review.rating %>"></div>
 <p><%= review.comment %></p>
 
+<div class="review-comment">
+    <%= render review.comments %>
+</div> 
 
-<div>
+<div class="comment-button">
     <% if user_signed_in? %>
-        <%= link_to "Add Comment", new_review_comment_path(review) %>
+        <%= button_to "Add Comment", new_review_comment_path(review) %>
     <% end %>
 </div>
 
-<div>
-    <%= render review.comments %>
-</div> 

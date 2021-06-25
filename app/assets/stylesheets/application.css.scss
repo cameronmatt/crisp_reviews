@@ -16,3 +16,25 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ * {
+    font-weight: 400;
+    font-style:  normal;
+    font-family: 'Circular-Loom';
+  
+    src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+  }
+
+  body {
+    background-image: url("code/crisp_reviews/app/assets/images/crisps.png");
+    margin-bottom: 50px;
+   }
+
+   .crisp-show {
+    padding: 10px;
+   }
+
+   .comment-button {
+    padding: 10px;
+    margin-left: 50px;
+   }

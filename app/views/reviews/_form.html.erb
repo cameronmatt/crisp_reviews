@@ -1,5 +1,5 @@
 <%= simple_form_for([@crisp, @crisp.reviews.build]) do |form| %>
-
+    <%= @crisp.errors.full_messages %>
     <%= form.input :comment, 
                     label: "Write Review", 
                     error: 'Please enter your review',
@@ -20,8 +20,5 @@ $(document).ready(function() {
         path: '/assets/', 
         scoreName: 'review[rating]'
     });
-    $('#rating-form').validate({
-        ignore: []
-})
 });
 </script>  

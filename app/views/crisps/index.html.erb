@@ -1,10 +1,23 @@
-<div class="row>"
+<div class="row">
     <% @crisps.each do |crisp| %>
-        <div class="col-md-3">
-            <a href="/crisps/<%= crisp.id %>">
-                <%= image_tag crisp.crisp_img.url(:crisp_index), class: "crisp" %>
-            </a>
+            <div class="col-md-3">
+                <a href="/crisps/<%= crisp.id %>">
+                    <%= image_tag crisp.crisp_img.url(:crisp_index), class: "crisp" %>
+                </a>
+            <div class="average-review-rating" data-score=<%= crisp.average_rating  %>></div>
             <h2><%= link_to crisp.name, crisp_path(crisp) %></h2>
         </div>
     <% end %>
 </div>
+
+<script>
+$(document).ready(function() {
+    $('.average-review-rating').raty({
+        readOnly: true,
+        score: function() {
+            return $(this).attr('data-score');
+        },
+        path: '/assets/'
+    });
+});
+</script>    
